@@ -1,0 +1,47 @@
+function TitanBar.BaseControl:Constructor(init)
+	self.Icon.MouseMove = function( sender, args )
+	self.Icon.MouseLeave = function( sender, args )
+	self.Icon.MouseClick = function( sender, args )
+	self.Icon.MouseDown = function( sender, args )
+	self.Icon.MouseUp = function( sender, args )
+	self.Lbl.MouseMove = function( sender, args )
+	self.Lbl.MouseLeave = function( sender, args )
+	self.Lbl.MouseClick = function( sender, args )
+	self.Lbl.MouseDown = function( sender, args )
+	self.Lbl.MouseUp = function( sender, args )
+function TitanBar.BaseControl:ShowHide()
+function TitanBar.BaseControl:LoadSettings()
+function TitanBar.BaseControl:AddMenuItem()
+	self.MenuOpt.Click = function( sender, args ) 
+function TitanBar.BaseControl.MoveCtr(sender, args, self)
+function TitanBar.BaseControl:ShowToolTipWin(Width, Height)
+function TitanBar.BaseControl:ShowMenu()
+	ATBBMenu1.Click = function( sender, args ) BGColor( "match", "this", self ); end
+	ATBBMenu2.Click = function( sender, args ) BGColor( "match", "ctr", self ); end
+	RBGMenu1.Click = function( sender, args ) BGColor( "reset", "this", self ); end
+	RBGMenu2.Click = function( sender, args ) BGColor( "reset", "ctr", self ); end
+	RBGMenu3.Click = function( sender, args ) BGColor( "reset", "all", self ); end
+	ABGTMenu1.Click = function( sender, args ) BGColor( "apply", "all", self ); end
+	ABGTMenu2.Click = function( sender, args ) BGColor("apply", "ctr", self); end
+	ABGTMenu3.Click = function( sender, args ) BGColor( "apply", "TitanBar", self ); end
+	UnloadMenu1.Click = function( sender, args ) self:UnloadControl(); end
+	UnloadMenu2.Click = function( sender, args ) UnloadAllControls(); end
+function TitanBar.BaseControl:BGColor()
+function TitanBar.BaseControl:UnloadControl()
+function TitanBar.BaseControl:ResetToolTipWin()
+function TitanBar.BaseControl:ApplySkin() --Tooltip skin
+function TitanBar.BaseControl:ShowWindow()
+function TitanBar.BaseControl:SetBackgroundColor()
+	SetToAllCtr.CheckedChanged = function( sender, args )
+	buttonSave.Click = function( sender, args )
+	alphaScrollBar.ValueChanged = function(sender, args)
+	buttonDefault.Click = function(sender, args)
+	buttonBlack.Click = function(sender, args)
+	buttonTrans.Click = function(sender, args)
+	ColourPicker.GetColorFromCoord = function( sender, X, Y )
+	ColourPicker.MouseMove = function( sender, args )
+	ColourPicker.MouseClick = function( sender, args )
+	wBackground.KeyDown = function( sender, args )
+	wBackground.MouseUp = function( sender, args )
+	wBackground.Closing = function( sender, args )
+function TitanBar.BaseControl:UpdateBCvariable()

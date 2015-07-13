@@ -1,0 +1,19 @@
+V2
+Went over entire code, line by line. Changed A LOT. :) 
+Removed a lot of duplicate code. The plugin is now less than half the original size.
+Many thanks to Bunny (AltWallet) for me letting use his code in my plug-in. Thank you!
+
+NEW:
+- All wallet items owned by character are displayed in wallet control.
+  Heavily relied on code by Bunny (AltWallet). Used with permission.
+  All text is taken from in-game. So no need for translations for wallet or 
+  updates to plug-in when Turbine updates the game.
+  
+REMOVED:
+- Removed ability to change background color for controls/TitanBar. 
+  I found out that it wasn't working in V1 and nobody noticed.
+  So I figured nobody used it and it was safe to remove.
+  If anybody wants it, I can restore the option.
+  
+KNOWN ISSUES:
+- Some tool-tip texts for wallet items are larger than it's windows.

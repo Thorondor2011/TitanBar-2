@@ -1,0 +1,58 @@
+--[[TitanBar.WalletControl = class(Turbine.Object);
+
+function TitanBar.WalletControl:Constructor(init)
+	Turbine.Object.Constructor( self );
+	self = TitanBar.BaseControl(init);
+	
+end
+    
+--function self.initColour()
+--end
+]]
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  function TitanBar.WalletControl:ShowHideW()
+	self.ShowMe = not self.ShowMe;
+	settings[self.NAME].V = self.ShowMe;
+	settings[self.NAME].W = string.format("%.0f", self.Where);
+	SavePluginData();
+	
+	if self.Where == 1 then	
+		self.Ctr:SetPosition( self.LocX, self.LocY ); 
+	end
+	if self.Where ~= 3 then
+		if self.Where == 1 then
+			self.Lbl:SetText( GetCurrency( PW ) );-- fix
+			self.Lbl:SetSize( self.Lbl:GetTextLength() * TitanBar.NumMultiplier, TitanBar.CTRHeight ); --Auto size with text lenght
+			if TitanBar.Height > 30 then TitanBar.CTRHeight = 30; end --Stop ajusting icon size if TitanBar height is > 30px
+
+			local Y = -1 - ((TitanBar.IconSize - TitanBar.CTRHeight) / 2);
+		
+			self.Icon:SetStretchMode( 1 );
+			self.Icon:SetPosition( self.Lbl:GetLeft() + self.Lbl:GetWidth() + 3, Y );
+			self.Ctr:SetSize( self.Icon:GetLeft() + TitanBar.IconSize, TitanBar.CTRHeight );
+			self.Icon:SetSize( TitanBar.IconSize, TitanBar.IconSize );
+			self.Icon:SetStretchMode( 3 );
+		end
+	end
+	if ShowMe then
+		self.Ctr:SetBackColor( Turbine.UI.Color( self.bcAlpha, self.bcRed, self.bcGreen, self.bcBlue ) );
+	end
+	self.Ctr:SetVisible( self.ShowMe );
+end
+  
+--[[function SavePluginData()
+	if GLocale == "de" then Turbine.PluginData.Save( Turbine.DataScope.Character, "TitanBarSettingsDE", settings ); end
+	if GLocale == "en" then Turbine.PluginData.Save( Turbine.DataScope.Character, "TitanBarSettingsEN", settings ); end
+	if GLocale == "fr" then Turbine.PluginData.Save( Turbine.DataScope.Character, "TitanBarSettingsFR", settings ); end
+end]]

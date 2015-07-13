@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Plugin>
+	<Information>
+		<Name>TitanBarV2</Name>
+		<Author>Thorondor</Author>
+		<Version>2</Version>
+		<Image>Thorondor/TitanBar2/Resources/icon.tga</Image>
+		
+	</Information>
+	<Package>Thorondor.TitanBar2.Main</Package>
+	<Configuration Apartment="ApartmentName" />
+</Plugin>

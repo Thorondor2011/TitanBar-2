@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PluginConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>903</Id>
+  <Name>TitanBar2</Name>
+  <Author>Thorondor</Author>
+  <Version>V2 ALPHA</Version>
+  <InfoUrl>http://www.lotrointerface.com/downloads/info903</InfoUrl>
+  <DownloadUrl>http://www.lotrointerface.com/downloads/download903</DownloadUrl>
+  <Descriptors>
+    <descriptor>Thorondor\TitanBar2.plugin</descriptor>
+    </Descriptors>
+  <Dependencies />
+</PluginConfig>
